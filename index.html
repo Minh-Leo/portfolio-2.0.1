@@ -63,7 +63,7 @@
       </symbol>
     </svg>
     <main>
-      <div class="content content--fixed">
+      <!-- <div class="content content--fixed">
         <header class="codrops-header">
           <div class="codrops-links">
             <a
@@ -97,17 +97,19 @@
           ><svg class="icon icon--github">
             <use xlink:href="#icon-github"></use></svg
         ></a>
-      </div>
-      <div class="banner">
+      </div> -->
+      <div class="banner overlay">
         <h2>I'm Minh</h2>
-        <p>
-          Developer oerwo Lorem ipsum dolor sit amet consectetur, adipisicing
-          elit. Eum tempora possimus eveniet inventore distinctio facere rerum
-          velit tenetur aut, mollitia tempore fuga veniam quo magnam aperiam
-          perspiciatis autem harum libero!
-        </p>
+
+        <p class="screen">EXPLORE</p>
+        <div class="intro">
+          <button class="myBtn" onclick="fadeOut()">EXPLORE</button>
+        </div>
       </div>
-      <div class="slideshow">
+
+      <div class="overlay-2"></div>
+
+      <div class="content slideshow">
         <div class="slide">
           <div class="preview">
             <div class="preview__img-wrap">
@@ -269,6 +271,7 @@
         </div>
         <nav class="slidenav">
           <button class="slidenav__item slidenav__item--prev">Previous</button>
+
           <button class="slidenav__item slidenav__item--next">Next</button>
           <button class="slidenav__preview">
             <svg class="icon icon--caret">
@@ -276,6 +279,9 @@
             </svg>
           </button>
         </nav>
+        <button class="slidenav__item slidenav__item--back" onclick="fadeIn()">
+          BACK
+        </button>
       </div>
     </main>
     <script src="js/imagesloaded.pkgd.min.js"></script>
