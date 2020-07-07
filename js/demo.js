@@ -313,7 +313,7 @@ const fadeOut = () => {
     opacity: 0,
   });
 
-  TweenMax.to('.screen', 0.5, {
+  TweenMax.to('.bio', 1, {
     y: -400,
     opacity: 0,
     ease: Power2.easeInOut,
@@ -330,8 +330,8 @@ const fadeOut = () => {
     ease: Expo.easeInOut,
   });
 
-  // Flashing screen
-  TweenMax.to('.overlay-2', 0.5, {
+  // Flashing bio
+  TweenMax.to('.overlay-2', 0.3, {
     delay: 1.5,
     top: '-110%',
     ease: Expo.easeInOut,
@@ -368,7 +368,7 @@ const fadeIn = () => {
   //   top: '110%',
   //   ease: Expo.easeInOut,
   // });
-  TweenMax.to('.overlay-2', 0.5, {
+  TweenMax.to('.overlay-2', 0.3, {
     delay: 0.5,
     top: '0%',
     ease: Expo.easeInOut,
@@ -387,7 +387,7 @@ const fadeIn = () => {
     ease: Expo.easeInOut,
   });
 
-  TweenMax.to('.screen', 0.5, {
+  TweenMax.to('.bio', 0.5, {
     y: 0,
     opacity: 1,
     delay: 1,
