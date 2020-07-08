@@ -8,6 +8,7 @@
     <meta name="keywords" content="slideshow,  animation, web design" />
     <meta name="author" content="" />
     <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
     <link rel="stylesheet" type="text/css" href="css/base.css" />
     <script>
       document.documentElement.className = 'js';
@@ -62,6 +63,28 @@
         />
       </symbol>
     </svg>
+
+    <!-- menu -->
+    <div class="icons">
+        <i class="fab fa-facebook-f icon"></i>
+        <i class="fab fa-linkedin-in icon"></i>
+        <i class="fab fa-github icon"></i>
+    </div>
+    <div class="topbar">      
+      <div class="topbar_menu" id="burger">
+        <span class="topbar_burger"></span>
+      </div>
+      <div class="topbar_burgerMenu" id="burgerMenu">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#photos">Gallery</a></li>
+          <li><a href="#videos">Videos</a></li>
+          <li><a href="#contacts">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- End Menu -->
+
     <main>
       <!-- <div class="content content--fixed">
         <header class="codrops-header">
@@ -104,6 +127,7 @@
           <h2>01</h2>
           <span class="rotate-left">Introduce</span>
         </div>
+        <div class="background profile"></div>
         <div class="bio">
           <h2>Hello</h2>
           <span></span>
@@ -113,6 +137,14 @@
             illum accusantium ratione fuga consectetur adipisci saepe. Quo
             quisquam soluta omnis.
           </p>
+          <q></q>
+            <small>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Temporibus voluptatibus quidem harum suscipit, rerum qui sit porro
+              vel sequi minus laudantium molestias, ratione cumque dicta natus
+              excepturi quo modi tenetur.</small
+            ></q
+          >
         </div>
         <div class="cta">
           <button class="myBtn" onclick="fadeOut()">EXPLORE</button>
@@ -122,6 +154,8 @@
       <div class="overlay-2"></div>
 
       <div class="content slideshow">
+        <div class="background projects"></div>
+
         <div class="nav-index">
           <h2>02</h2>
           <span class="rotate-left">Projects</span>
@@ -302,6 +336,7 @@
     </main>
     <script src="js/imagesloaded.pkgd.min.js"></script>
     <script src="js/TweenMax.min.js"></script>
-    <script src="js/demo.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/slideShow.js"></script>
   </body>
 </html>

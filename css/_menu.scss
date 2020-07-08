@@ -1,0 +1,227 @@
+.topbar {
+  font-size: 2rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 3rem;
+  right: 2rem;
+  z-index: 99;
+
+  &_menu {
+    position: relative;
+    width: 5rem;
+    height: 4rem;
+    transition: all 0.2s;
+
+    &:hover {
+      animation: pulse 1s infinite;
+    }
+  }
+  &_burger {
+    display: block;
+    background-color: var(--color-nav);
+    height: 0.1rem;
+    width: 2.2rem;
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    transition: all 0.2s;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -0.6rem;
+      right: 0rem;
+      height: 0.1rem;
+      width: 3rem;
+      background-color: var(--color-nav);
+      transition: all 0.2s;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0.6rem;
+      right: 0rem;
+      height: 0.1rem;
+      width: 2.5rem;
+      background-color: var(--color-nav);
+      transition: all 0.2s;
+    }
+  }
+  .close {
+    .topbar_burger {
+      width: 2rem;
+      &::after {
+        top: -0.5rem;
+        right: 0.3rem;
+        height: 0.1rem;
+        width: 2rem;
+      }
+      &::before {
+        top: 0.5rem;
+        right: 0.7rem;
+        height: 0.1rem;
+        width: 2rem;
+      }
+    }
+  }
+
+  // toggle menu
+  &_burgerMenu {
+    // display: none;
+    font-size: 1rem;
+    visibility: hidden;
+    width: 15rem;
+    // height: 30rem;
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+    z-index: 98;
+    padding-top: 20px;
+    overflow: auto;
+    opacity: 0;
+    transition: all 0.5s;
+
+    ul {
+      opacity: 0;
+      transition: all 1s;
+    }
+    li {
+      text-align: right;
+      list-style: none;
+      margin-left: 2rem;
+      margin-top: 1rem;
+    }
+    a {
+      //   color: $color-primary;
+      font-family: inherit;
+      &:hover {
+        color: var(--color-bg2);
+      }
+    }
+  }
+  .visible {
+    // display: block;
+    visibility: visible;
+    opacity: 1;
+    ul {
+      opacity: 1;
+    }
+  }
+}
+
+.icons {
+  display: flex;
+  z-index: 10;
+  position: absolute;
+  top: 4rem;
+  right: 20%;
+
+  .icon {
+    color: var(--color-nav);
+    margin: 0.5rem 1rem;
+    transition: all 0.3s;
+
+    &:hover {
+      color: var(--color-bg2);
+    }
+  }
+}
+
+// @media only screen and (max-width: $bp-large) {
+//   .topbar {
+//     &_burgerMenu {
+//       width: 150px;
+//       height: 30rem;
+//       top: 0;
+//       left: 40px;
+//     }
+//   }
+// }
+
+// @media only screen and (max-width: $bp-medium) {
+//   .topbar {
+//     grid-column: full-start / full-end;
+//     grid-row: 1 / 2;
+//     background-color: transparent;
+//     width: 80vw;
+//     height: 9rem;
+
+//     &_menu {
+//       position: fixed;
+//       top: 0;
+//       left: 65%;
+//       width: 7rem;
+//       height: 8rem;
+//       box-shadow: 2px 5px 0.5rem rgba(#000000, 0.2);
+//     }
+
+//     &_burger {
+//       width: 3.2rem;
+//       top: 5rem;
+//       left: 1.5rem;
+//       &::before {
+//         top: -1rem;
+//         left: 0rem;
+//         width: 3.5rem;
+//       }
+//       &::after {
+//         top: 1rem;
+//         left: 0rem;
+//         width: 4rem;
+//       }
+//     }
+
+//     &_burgerMenu {
+//       width: 100vw;
+//       height: 40rem;
+//       top: 7rem;
+//       left: 0;
+//       clip-path: none;
+//       li {
+//         text-align: center;
+//         margin-bottom: 3rem;
+//       }
+//       a {
+//         font-size: 2.5rem;
+//       }
+//     }
+
+//     &_title {
+//       display: none;
+//     }
+
+//     &_icons {
+//       display: none;
+//     }
+//   }
+// }
+// @media only screen and (max-width: $bp-small) {
+//   .topbar {
+//     &_menu {
+//       left: 60%;
+//     }
+//   }
+// }
+// @media only screen and (max-width: $bp-smallest) {
+//   .topbar {
+//     &_menu {
+//       left: 55%;
+//     }
+//   }
+// }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
