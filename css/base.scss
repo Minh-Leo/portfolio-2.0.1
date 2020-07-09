@@ -261,13 +261,16 @@ main {
   transform: translateX(-50%);
   left: 50%;
   border: 0;
+  border-radius: 3rem;
   background: none;
   padding: 1rem;
-  transition: 0.3s transform;
-}
+  transition: 0.3s all;
 
-.slidenav__preview:hover {
-  color: var(--color-link-hover);
+  &:hover {
+    color: var(--color-link-hover);
+    background: var(--color-white);
+    opacity: 0.8;
+  }
 }
 
 .slidenav__preview .icon {
@@ -301,6 +304,27 @@ main {
   overflow: hidden;
   opacity: 0;
 }
+// Try video
+.video-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+}
+
+video {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  // filter: brightness(60%);
+  opacity: 0.8;
+  z-index: -2;
+}
+// End try
 
 .preview__img {
   background-size: cover;
@@ -329,6 +353,10 @@ main {
   padding: 0 1rem;
   margin: 0 0 1rem 0;
   text-align: center;
+  // z-index: 10;
+  &:hover {
+    font-size: 3rem;
+  }
 }
 
 .preview__content {
@@ -337,6 +365,10 @@ main {
   text-align: justify;
   opacity: 0;
   padding: 0 1rem;
+  // z-index: 10;
+  &:hover {
+    font-size: 3rem;
+  }
 }
 
 .preview__content p {

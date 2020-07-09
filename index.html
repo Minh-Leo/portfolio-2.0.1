@@ -163,7 +163,6 @@
           <button class="myBtn" onclick="fadeOut()">EXPLORE</button>
         </div>
       </div>
-
       <div class="overlay-2"></div>
 
       <div class="content slideshow">
@@ -176,10 +175,17 @@
         <div class="slide">
           <div class="preview">
             <div class="preview__img-wrap">
-              <div
+              <!-- <div
                 class="preview__img"
                 style="background-image: url(img/project1.jpg);"
-              ></div>
+              ></div> -->
+              <!-- Try video -->
+              <div class="video-container">
+                <video autoplay muted loop id="myVideo">
+                  <source src="img/video/project01.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <!-- End trying -->
               <div class="preview__img-reveal"></div>
             </div>
             <h3 class="preview__title">Carmino Burano</h3>
@@ -207,10 +213,17 @@
         <div class="slide">
           <div class="preview">
             <div class="preview__img-wrap">
-              <div
+              <!-- <div
                 class="preview__img"
                 style="background-image: url(img/project2.jpg);"
-              ></div>
+              ></div> -->
+              <!-- Try video -->
+              <div class="video-container">
+                <video autoplay muted loop id="myVideo">
+                  <source src="img/video/project02.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <!-- End trying -->
               <div class="preview__img-reveal"></div>
             </div>
             <h3 class="preview__title">Jackardi Jack</h3>
@@ -239,10 +252,17 @@
         <div class="slide">
           <div class="preview">
             <div class="preview__img-wrap">
-              <div
+              <!-- <div
                 class="preview__img"
                 style="background-image: url(img/project3.jpg);"
-              ></div>
+              ></div> -->
+              <!-- Try video -->
+              <div class="video-container">
+                <video autoplay muted loop id="myVideo">
+                  <source src="img/video/project03.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <!-- End trying -->
               <div class="preview__img-reveal"></div>
             </div>
             <h3 class="preview__title">Hostabili Hell</h3>
@@ -271,10 +291,17 @@
         <div class="slide">
           <div class="preview">
             <div class="preview__img-wrap">
-              <div
+              <!-- <div
                 class="preview__img"
                 style="background-image: url(img/project4.jpg);"
-              ></div>
+              ></div> -->
+              <!-- Try video -->
+              <div class="video-container">
+                <video autoplay muted loop id="myVideo">
+                  <source src="img/video/project04.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <!-- End trying -->
               <div class="preview__img-reveal"></div>
             </div>
             <h3 class="preview__title">Tellawa Tell</h3>
@@ -345,6 +372,7 @@
         <button class="slidenav__item slidenav__item--back" onclick="fadeIn()">
           BACK
         </button>
+        <div class="cta"></div>
       </div>
     </main>
     <script src="js/imagesloaded.pkgd.min.js"></script>
