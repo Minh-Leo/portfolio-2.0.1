@@ -546,7 +546,7 @@ main {
 .img-profile {
   width: 20vw;
   min-height: 40rem;
-  background: url('/img/Minh.jpg');
+  background: url('https://minh-leo.github.io/portfolio-2.0.1/img/Minh.jpg');
 
   background-repeat: no-repeat;
   background-size: cover;
@@ -571,7 +571,7 @@ main {
   z-index: -10;
 
   &.profile {
-    background: url('/img/profileBg.jpg');
+    background: url('https://minh-leo.github.io/portfolio-2.0.1/img/profileBg.jpg');
     background-color: var(--color-bg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -579,7 +579,7 @@ main {
     opacity: 0.4;
   }
   &.projects {
-    background: url('/img/projectsBg.jpg');
+    background: url('https://minh-leo.github.io/portfolio-2.0.1/img/projectsBg.jpg');
     background-color: var(--color-bg);
     background-repeat: no-repeat;
     background-size: cover;
