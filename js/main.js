@@ -60,8 +60,8 @@ const fadeIn = () => {
   //   top: '110%',
   //   ease: Expo.easeInOut,
   // });
-  TweenMax.to('.overlay-2', 0.3, {
-    delay: 0.5,
+  TweenMax.to('.overlay-2', 0.2, {
+    delay: 0.7,
     top: '0%',
     ease: Expo.easeInOut,
   });
