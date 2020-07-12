@@ -305,7 +305,7 @@ video {
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   // filter: brightness(60%);
-  opacity: 0.7;
+  opacity: 0.8;
   z-index: -2;
 }
 
@@ -351,7 +351,7 @@ video {
   max-width: 600px;
   column-count: 2;
   position: absolute;
-  bottom: 15%;
+  bottom: 5.5rem;
   right: 5rem;
   text-align: justify;
   opacity: 0;
@@ -680,10 +680,6 @@ video {
 // Media Queries
 
 @media screen and (min-width: 300px) {
-  body {
-    padding: 0;
-    margin: 0;
-  }
   .content {
     position: relative;
     display: flex;
@@ -693,26 +689,6 @@ video {
     min-height: 100vh;
     text-align: left;
   }
-  // .content--fixed {
-  //   position: fixed;
-  //   z-index: 10000;
-  //   top: 0;
-  //   left: 0;
-  //   display: grid;
-  //   align-content: space-between;
-  //   width: 100%;
-  //   max-width: none;
-  //   min-height: 0;
-  //   height: 100vh;
-  //   padding: 1.5rem 2rem;
-  //   pointer-events: none;
-  //   grid-template-columns: 50% 50%;
-  //   grid-template-rows: auto auto auto;
-  //   grid-template-areas:
-  //     'codropsheader info'
-  //     '... ...'
-  //     'github ...';
-  // }
   .slideshow {
     padding: 0;
     margin: 0;
@@ -721,7 +697,7 @@ video {
     height: 100vh;
   }
   .slide__img-wrap {
-    width: 20vw;
+    width: 30vw;
   }
   // .preview__title {
   //   font-size: 2.5rem;
@@ -730,7 +706,10 @@ video {
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 1200px) {
+  .slide__img-wrap {
+    width: 30%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -839,12 +818,18 @@ video {
   .slide {
   }
   .slide__img-wrap {
-    width: 50vw;
+    width: 40vw;
   }
   // .preview__title {
   //   font-size: 2.5rem;
   // }
   .preview__content {
+    font-size: 0.7rem;
+    max-width: 80vw;
+    bottom: 5rem;
+    right: 2rem;
+    margin: auto;
+    padding: 0.5rem 0.5rem;
   }
 
   .slide__number {
@@ -973,11 +958,29 @@ video {
     font-size: 2rem;
   }
 
+  .slide__img-wrap {
+    width: 50vw;
+  }
+
   .slidenav__item--back {
     top: 1.5rem;
   }
 
   .footer {
     display: none;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .bio {
+    & .img-profile {
+      width: 60%;
+      min-height: 12rem;
+    }
+
+    & .greetings {
+      font-size: 0.6rem;
+      margin: 0.7rem auto;
+    }
   }
 }
