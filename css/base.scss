@@ -712,6 +712,22 @@ video {
   }
 }
 
+@media screen and (max-width: 992px) {
+  .bio {
+    & .img-profile {
+      width: 40%;
+      min-height: 20rem;
+      top: 40%;
+      right: 0;
+    }
+
+    & .tech-icons {
+      width: 40%;
+      left: 0rem;
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .icons {
     top: 1rem;
@@ -780,6 +796,7 @@ video {
       width: 40%;
       display: flex;
       top: -1rem;
+      left: 4rem;
 
       & div {
         margin-right: 2rem;

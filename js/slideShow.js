@@ -177,6 +177,7 @@
           startAt: action === 'hide' ? {} : { opacity: 0, y: '20%' },
           y: action === 'hide' ? '20%' : '0%',
           opacity: action === 'hide' ? 0 : 1,
+          display: action === 'hide' ? 'none' : 'block',
         });
         // Move and fade the title and content.
         TweenMax.to(
@@ -188,6 +189,7 @@
             startAt: action === 'hide' ? {} : { opacity: 0, y: '200%' },
             y: action === 'hide' ? '200%' : '0%',
             opacity: action === 'hide' ? 0 : 1,
+            display: action === 'hide' ? 'none' : 'block',
           }
         );
       });
