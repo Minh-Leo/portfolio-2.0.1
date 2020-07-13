@@ -55,6 +55,7 @@
           delay: action === 'hide' ? 0 : this.config.animation.duration / 2,
           ease: this.config.animation.ease,
           opacity: action === 'hide' ? 0 : 1,
+          display: action === 'hide' ? 'none' : 'block',
         };
         let imgOpts = Object.assign({}, commonOpts);
         let numberOpts = Object.assign({}, commonOpts);
@@ -69,7 +70,11 @@
             action === 'hide' ? '0%' : direction === 'left' ? '100%' : '-100%';
           imgOpts.startAt =
             action === 'show'
-              ? { opacity: 0, x: direction === 'left' ? '-20%' : '20%' }
+              ? {
+                  opacity: 0,
+                  display: 'none',
+                  x: direction === 'left' ? '-20%' : '20%',
+                }
               : {};
           imgOpts.x =
             action === 'hide' ? (direction === 'left' ? '20%' : '-20%') : '0%';
@@ -103,7 +108,11 @@
             action === 'hide' ? '0%' : direction === 'down' ? '100%' : '-100%';
           imgOpts.startAt =
             action === 'show'
-              ? { opacity: 1, y: direction === 'down' ? '-10%' : '10%' }
+              ? {
+                  opacity: 1,
+                  display: 'block',
+                  y: direction === 'down' ? '-10%' : '10%',
+                }
               : {};
           imgOpts.y =
             action === 'hide' ? (direction === 'down' ? '10%' : '-10%') : '0%';
