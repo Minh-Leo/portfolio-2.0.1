@@ -487,11 +487,11 @@ video {
   & .img-profile {
     width: 40%;
     min-height: 30rem;
-    background: url('https://minh-leo.github.io/portfolio-2.0.1/img/Minh.jpg');
-
+    background: linear-gradient(#1f222a33, #101116aa), url('/img/Minh.jpg');
+    filter: brightness(1.5);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: left;
+    background-position: center;
     position: absolute;
     top: 25%;
     right: 4rem;
