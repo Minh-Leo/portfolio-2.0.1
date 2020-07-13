@@ -148,3 +148,10 @@ menu.onclick = () => {
 
 // window.addEventListener('resize', playVisibleVideos);
 // window.addEventListener('DOMContentLoaded', playVisibleVideos);
+
+setTimeout(() => {
+  const video1 = document.getElementById('myVideo1');
+
+  video1.play();
+  alert('play video 1');
+}, 1000);
