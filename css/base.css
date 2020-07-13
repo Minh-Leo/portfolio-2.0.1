@@ -920,8 +920,7 @@ video {
 .bio .img-profile {
   width: 40%;
   min-height: 30rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(#1f222a33), to(#101116aa)), url("https://minh-leo.github.io/portfolio-2.0.1/img/Minh.jpg");
-  background: linear-gradient(#1f222a33, #101116aa), url("https://minh-leo.github.io/portfolio-2.0.1/img/Minh.jpg");
+  background: url("https://minh-leo.github.io/portfolio-2.0.1/img/Minh.jpg");
   -webkit-filter: brightness(1.5);
           filter: brightness(1.5);
   background-repeat: no-repeat;

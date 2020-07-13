@@ -149,9 +149,25 @@ menu.onclick = () => {
 // window.addEventListener('resize', playVisibleVideos);
 // window.addEventListener('DOMContentLoaded', playVisibleVideos);
 
-setTimeout(() => {
-  const video1 = document.getElementById('myVideo1');
+Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
+  get: function () {
+    return !!(
+      this.currentTime > 0 &&
+      !this.paused &&
+      !this.ended &&
+      this.readyState > 2
+    );
+  },
+});
 
-  video1.play();
-  alert('play video 1');
-}, 1000);
+document.getElementById('previewBtn').addEventListener('click', () => {
+  const videoElement = document.getElementById('myVideo1');
+  if (videoElement.playing) {
+    // video is already playing so do nothing
+  } else {
+    // video is not playing
+    // so play video now
+    videoElement.play();
+    alert('play video 1');
+  }
+});
