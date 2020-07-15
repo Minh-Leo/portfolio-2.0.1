@@ -81,7 +81,9 @@ q {
   quotes: '\201C''\201D''\2018''\2019';
 }
 small {
-  font-size: 80%;
+  font-size: 60%;
+  position: relative;
+  right: 0;
 }
 sub,
 sup {

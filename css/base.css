@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&family=Oswald:wght@400;700&display=swap");
 article,
 aside,
 details,
@@ -98,7 +99,9 @@ q {
 }
 
 small {
-  font-size: 80%;
+  font-size: 60%;
+  position: relative;
+  right: 0;
 }
 
 sub,
@@ -467,7 +470,7 @@ body {
   --color-text: #fff;
   --color-title: #fff;
   --color-nav: #fff;
-  font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+  font-family: Oswald, 'Trebuchet MS', Arial, sans-serif;
   color: var(--color-text);
   background: var(--color-bg);
   -webkit-font-smoothing: antialiased;
@@ -481,6 +484,7 @@ a {
   text-decoration: none;
   color: var(--color-link);
   outline: none;
+  cursor: pointer;
 }
 
 a:hover,
@@ -491,6 +495,15 @@ a:focus {
 button:focus,
 a:focus {
   outline: none;
+}
+
+.test {
+  position: absolute;
+  top: 40%;
+  right: 20%;
+  z-index: 999;
+  width: 20rem;
+  background-color: #000;
 }
 
 .hidden {
@@ -526,7 +539,6 @@ main {
 
 .slide {
   width: 100%;
-  height: 50vh;
   top: 0;
   position: absolute;
   display: -ms-grid;
@@ -569,8 +581,8 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   position: absolute;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
   pointer-events: none;
   -webkit-filter: saturate(0.7);
           filter: saturate(0.7);
@@ -778,14 +790,8 @@ video {
   background: var(--color-reveal);
 }
 
-.preview__title {
-  display: none;
-}
-
 .preview__content {
   max-width: 600px;
-  -webkit-column-count: 2;
-          column-count: 2;
   position: absolute;
   bottom: 5.5rem;
   right: 5rem;
@@ -806,17 +812,6 @@ video {
 }
 
 /* Landing page */
-.content {
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  /* z-index: -1;
-  position: absolute;
-  top: 60%;
-  left: 10%;
-  transform: translate(0, -50%); */
-}
-
 .overlay-2 {
   z-index: 0;
   position: absolute;
@@ -862,6 +857,7 @@ video {
 
 .nav-index h2 {
   font-size: 3rem;
+  margin-left: -1rem;
 }
 
 .nav-index span {
@@ -879,7 +875,7 @@ video {
   height: 1px;
   background: currentColor;
   top: 0.7rem;
-  left: 7rem;
+  left: 6rem;
 }
 
 .nav-index.horizontal {
@@ -1126,7 +1122,7 @@ video {
 
 @media screen and (min-width: 300px) {
   .content {
-    position: relative;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1136,6 +1132,7 @@ video {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    position: relative;
     margin: 0 auto;
     min-height: 100vh;
     text-align: left;
@@ -1286,10 +1283,11 @@ video {
   }
   .nav-index {
     width: 3rem;
-    left: 1rem;
+    left: 2rem;
   }
   .nav-index h2 {
     font-size: 2rem;
+    margin-left: -1.5rem;
   }
   .nav-index span {
     top: 15rem;

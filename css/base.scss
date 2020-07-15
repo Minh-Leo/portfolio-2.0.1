@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&family=Oswald:wght@400;700&display=swap');
+
 @import 'config';
 @import 'menu';
 @import 'animation';
@@ -6,7 +8,6 @@
 
 html {
   font-family: sans-serif;
-  // background: var(--color-bg);
 }
 
 body {
@@ -20,7 +21,7 @@ body {
   --color-text: #fff;
   --color-title: #fff;
   --color-nav: #fff;
-  font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+  font-family: Oswald, 'Trebuchet MS', Arial, sans-serif;
   // min-height: 100vh;
   color: var(--color-text);
   background: var(--color-bg);
@@ -40,6 +41,7 @@ a {
   text-decoration: none;
   color: var(--color-link);
   outline: none;
+  cursor: pointer;
 }
 
 a:hover,
@@ -50,6 +52,15 @@ a:focus {
 button:focus,
 a:focus {
   outline: none;
+}
+
+.test {
+  position: absolute;
+  top: 40%;
+  right: 20%;
+  z-index: 999;
+  width: 20rem;
+  background-color: #000;
 }
 
 .hidden {
@@ -86,7 +97,6 @@ main {
 
 .slide {
   width: 100%;
-  height: 50vh;
   top: 0;
   position: absolute;
   display: grid;
@@ -122,20 +132,10 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   position: absolute;
-  backface-visibility: hidden;
+  backface-visibility: visible;
   pointer-events: none;
   filter: saturate(0.7);
 }
-
-// .slide__img::after {
-//   content: '';
-//   // background: rgba(22, 63, 191, 0.62);
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-// }
 
 .slide__img-reveal {
   position: absolute;
@@ -315,41 +315,13 @@ video {
   backface-visibility: hidden;
 }
 
-// .preview__img::after {
-//   content: '';
-//   background: rgba(22, 63, 191, 0.62);
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-// }
-
 .preview__img-reveal {
   background: var(--color-reveal);
 }
 
-.preview__title {
-  // position: absolute;
-  // bottom: 10%;
-  // left: 10%;
-  // font-size: 1.5rem;
-  // opacity: 0;
-  // padding: 0 1rem;
-  // margin: 0 0 1rem 0;
-  // text-align: center;
-  // background: #35394299;
-  // border-radius: 1rem;
-  display: none;
-  // z-index: 10;
-  // &:hover {
-  //   font-size: 3rem;
-  // }
-}
-
 .preview__content {
   max-width: 600px;
-  column-count: 2;
+  // column-count: 2;
   position: absolute;
   bottom: 5.5rem;
   right: 5rem;
@@ -370,16 +342,6 @@ video {
 }
 
 /* Landing page */
-.content {
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  /* z-index: -1;
-  position: absolute;
-  top: 60%;
-  left: 10%;
-  transform: translate(0, -50%); */
-}
 
 .overlay-2 {
   z-index: 0;
@@ -429,6 +391,7 @@ video {
 
   & h2 {
     font-size: 3rem;
+    margin-left: -1rem;
     // color: var(--color-bg2);
   }
 
@@ -446,7 +409,7 @@ video {
       height: 1px;
       background: currentColor;
       top: 0.7rem;
-      left: 7rem;
+      left: 6rem;
     }
   }
 
@@ -546,7 +509,6 @@ video {
 
     & i {
       font-size: 2rem;
-      // color: var(--color-bg-flash);
       position: relative;
       transition: all 0.5s ease;
 
@@ -681,10 +643,12 @@ video {
 
 @media screen and (min-width: 300px) {
   .content {
-    position: relative;
+    width: 100%;
+
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     margin: 0 auto;
     min-height: 100vh;
     text-align: left;
@@ -702,8 +666,6 @@ video {
   // .preview__title {
   //   font-size: 2.5rem;
   // }
-  .preview__content {
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -830,16 +792,15 @@ video {
     bottom: 15%;
   }
 
-  .slideshow {
-  }
-  .slide {
-  }
+  // .slideshow {
+  // }
+  // .slide {
+  // }
+
   .slide__img-wrap {
     width: 40vw;
   }
-  // .preview__title {
-  //   font-size: 2.5rem;
-  // }
+
   .preview__content {
     font-size: 0.7rem;
     max-width: 80vw;
@@ -865,10 +826,11 @@ video {
 
   .nav-index {
     width: 3rem;
-    left: 1rem;
+    left: 2rem;
 
     & h2 {
       font-size: 2rem;
+      margin-left: -1.5rem;
     }
 
     & span {

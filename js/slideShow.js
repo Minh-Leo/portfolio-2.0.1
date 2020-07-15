@@ -309,7 +309,7 @@
 
   // Preload all the images in the page..
   imagesLoaded(
-    document.querySelectorAll(['.slide__img', '.preview__img']),
+    document.querySelectorAll(['.slide__img', '.preview__img', 'video']),
     { background: true },
     () => {
       document.body.classList.remove('loading');
