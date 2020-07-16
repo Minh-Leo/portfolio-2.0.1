@@ -85,9 +85,15 @@ const fadeIn = () => {
 
 let menu = document.getElementById('burger');
 let burgerMenu = document.getElementById('burgerMenu');
+let linksMenu = document.getElementById('linksMenu');
+let linksList = document.getElementById('linksList');
 menu.onclick = () => {
   burgerMenu.classList.toggle('visible');
   menu.classList.toggle('close');
+};
+linksMenu.onclick = () => {
+  linksList.classList.toggle('visible');
+  linksMenu.classList.toggle('close');
 };
 
 // Add 'playing' property to videos elements

@@ -350,15 +350,6 @@ table {
   color: var(--color-bg2);
 }
 
-.topbar .visible {
-  visibility: visible;
-  opacity: 1;
-}
-
-.topbar .visible ul {
-  opacity: 1;
-}
-
 .icons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -378,6 +369,99 @@ table {
 
 .icons .icon:hover {
   color: var(--color-bg2);
+}
+
+.links-menu {
+  font-size: 2rem;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 2rem;
+  left: 3rem;
+  z-index: 99;
+  pointer-events: auto;
+}
+
+.links-menu_icon {
+  position: relative;
+  width: 5rem;
+  height: 4rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.links-menu_icon:hover {
+  -webkit-animation: pulse 1s infinite;
+          animation: pulse 1s infinite;
+}
+
+.links-menu_icon:hover i {
+  color: var(--color-link-hover);
+}
+
+.links-menu .close i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.links-menu_list {
+  font-size: 1rem;
+  visibility: hidden;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  top: 7rem;
+  left: 1rem;
+  z-index: 98;
+  padding-top: 20px;
+  overflow: auto;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.links-menu_list ul {
+  padding: 0;
+  opacity: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.links-menu_list li {
+  text-align: left;
+  list-style: none;
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+.links-menu_list a {
+  font-family: inherit;
+}
+
+.links-menu_list a:hover {
+  color: var(--color-bg2);
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.visible ul {
+  opacity: 1;
 }
 
 @-webkit-keyframes loaderAnim {
