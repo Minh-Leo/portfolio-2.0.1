@@ -83,10 +83,18 @@ const fadeIn = () => {
   });
 };
 
+// Burger Menu actions
 let menu = document.getElementById('burger');
 let burgerMenu = document.getElementById('burgerMenu');
 let linksMenu = document.getElementById('linksMenu');
 let linksList = document.getElementById('linksList');
+
+let homeBtn = document.getElementById('homeBtn');
+let projectsBtn = document.getElementById('projectsBtn');
+let emailBtn = document.getElementById('emailBtn');
+homeBtn.addEventListener('click', () => fadeIn());
+projectsBtn.addEventListener('click', () => fadeOut());
+
 menu.onclick = () => {
   burgerMenu.classList.toggle('visible');
   menu.classList.toggle('close');

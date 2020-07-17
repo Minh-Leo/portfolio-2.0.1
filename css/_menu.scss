@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 3rem;
+  top: 1rem;
   right: 2rem;
   z-index: 99;
 
@@ -116,7 +116,7 @@
   display: flex;
   z-index: 10;
   position: absolute;
-  top: 4rem;
+  top: 2rem;
   right: 20%;
 
   .icon {
@@ -140,17 +140,8 @@
   position: absolute;
   bottom: 8rem;
   left: 4rem;
-  // z-index: 99;
-
+  transition: all 0.2s;
   pointer-events: auto;
-  // border: 0;
-  // background: none;
-  // padding: 1rem;
-  // margin: 0.85rem;
-  // text-transform: inherit;
-  // position: relative;
-  // line-height: 1;
-  // color: var(--color-nav);
 
   &_icon {
     position: relative;
@@ -164,9 +155,11 @@
       font-size: 1.5rem;
       position: absolute;
       bottom: 0;
+      transition: all 0.5s;
     }
     & span {
       font-size: 1rem;
+      color: rgb(200, 0, 0);
       width: max-content;
       position: absolute;
       bottom: 0.3rem;
@@ -183,8 +176,6 @@
     }
   }
   .close {
-    transition: transform 0.2s;
-
     & i {
       transform: rotate(180deg);
     }

@@ -154,6 +154,8 @@ main {
   position: absolute;
   top: 5.25rem;
   opacity: 0;
+  padding: 0 1rem;
+  border-radius: 0.5rem;
   text-shadow: -1px -1px 0 var(--color-bg), 1px -1px 0 var(--color-bg),
     -1px 1px 0 var(--color-bg), 1px 1px 0 var(--color-bg);
 }
@@ -161,7 +163,7 @@ main {
 .slide__title {
   margin: 0;
   grid-area: 1 / 1 / 1 / 1;
-  font-size: 3vw;
+  font-size: 4vw;
   color: var(--color-title);
   text-shadow: -1px -1px 0 var(--color-bg), 1px -1px 0 var(--color-bg),
     -1px 1px 0 var(--color-bg), 1px 1px 0 var(--color-bg);
@@ -370,7 +372,7 @@ video {
     font-weight: 400;
     text-transform: uppercase;
     position: absolute;
-    top: 4rem;
+    top: 2rem;
     left: 3rem;
 
     &::after {
@@ -458,7 +460,7 @@ video {
     background-size: cover;
     background-position: center;
     position: absolute;
-    top: 25%;
+    top: 10%;
     right: 4rem;
     opacity: 0.9;
     border: 2px solid var(--color-bg-flash);
@@ -477,10 +479,22 @@ video {
     & h2 {
       margin: 0;
       font-size: 3rem;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
 
     & p {
+      width: 80%;
+      position: absolute;
+      right: 0;
+      text-align: right;
       columns: 2;
+
+      & span {
+        display: block;
+        text-align: left;
+      }
     }
   }
 
@@ -489,7 +503,7 @@ video {
     justify-content: left;
     align-items: flex-start;
     position: relative;
-    top: 9rem;
+    top: 6rem;
     left: 4rem;
     color: var(--color-bg-flash);
 
@@ -605,7 +619,7 @@ video {
   letter-spacing: 6px;
   text-transform: uppercase;
   display: block;
-  padding: 0.5rem 2rem;
+  padding: 0.8rem 2rem;
   color: #fff;
   border: 1px solid #fff;
   border-top: none;
@@ -710,13 +724,14 @@ video {
     & .img-profile {
       width: 40%;
       min-height: 40vh;
-      top: 40%;
+      top: 10%;
       right: 0;
     }
 
     & .tech-icons {
       width: 40%;
       min-height: 40vh;
+      top: 2rem;
       left: 0rem;
     }
   }
@@ -786,10 +801,17 @@ video {
 
       & h2 {
         font-size: 2rem;
+        position: relative;
       }
 
       & p {
+        width: 100%;
         columns: 1;
+        position: relative;
+        text-align: center;
+        & span {
+          text-align: center;
+        }
       }
     }
 
@@ -827,7 +849,7 @@ video {
     font-size: 1rem;
     height: 3rem;
     top: unset;
-    left: 75%;
+    left: 70%;
     bottom: 15%;
   }
 
@@ -856,7 +878,7 @@ video {
   }
 
   .slide__title {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
 
   .slidenav__item--back {
