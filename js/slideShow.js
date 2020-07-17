@@ -81,7 +81,8 @@
           titleOpts.startAt =
             action === 'show'
               ? {
-                  opacity: 1,
+                  opacity: 0,
+                  display: 'none',
                   scale: 0.2,
                   x: direction === 'left' ? '-200%' : '200%',
                 }
@@ -119,7 +120,11 @@
           (titleOpts.ease = this.config.animation.ease),
             (titleOpts.startAt =
               action === 'show'
-                ? { opacity: 1, y: direction === 'down' ? '-100%' : '100%' }
+                ? {
+                    opacity: 1,
+                    display: 'block',
+                    y: direction === 'down' ? '-100%' : '100%',
+                  }
                 : {});
           titleOpts.y =
             action === 'hide'

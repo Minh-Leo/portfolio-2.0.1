@@ -372,7 +372,6 @@ table {
 }
 
 .links-menu {
-  font-size: 2rem;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -388,27 +387,47 @@ table {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  top: 2rem;
-  left: 3rem;
-  z-index: 99;
+  bottom: 8rem;
+  left: 4rem;
   pointer-events: auto;
 }
 
 .links-menu_icon {
   position: relative;
-  width: 5rem;
-  height: 4rem;
+  bottom: 0;
+  width: 3rem;
+  height: 3rem;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  cursor: pointer;
 }
 
-.links-menu_icon:hover {
-  -webkit-animation: pulse 1s infinite;
-          animation: pulse 1s infinite;
+.links-menu_icon i {
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 0;
 }
 
-.links-menu_icon:hover i {
+.links-menu_icon span {
+  font-size: 1rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  bottom: 0.3rem;
+  left: 3rem;
+}
+
+.links-menu_icon:hover i,
+.links-menu_icon:hover span {
   color: var(--color-link-hover);
+}
+
+.links-menu .close {
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 .links-menu .close i {
@@ -417,16 +436,16 @@ table {
 }
 
 .links-menu_list {
-  font-size: 1rem;
+  font-size: 1.2rem;
   visibility: hidden;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   position: absolute;
-  top: 7rem;
+  bottom: 1rem;
   left: 1rem;
   z-index: 98;
-  padding-top: 20px;
+  padding-bottom: 20px;
   overflow: auto;
   opacity: 0;
   -webkit-transition: all 0.5s;
@@ -541,6 +560,7 @@ table {
 
 html {
   font-family: sans-serif;
+  font-size: 16px;
 }
 
 body {
@@ -667,7 +687,7 @@ main {
   position: absolute;
   -webkit-backface-visibility: visible;
           backface-visibility: visible;
-  pointer-events: none;
+  pointer-events: auto;
   -webkit-filter: saturate(0.7);
           filter: saturate(0.7);
 }
@@ -681,7 +701,7 @@ main {
   background: var(--color-reveal);
   -webkit-transform: translate3d(-100%, 0, 0);
           transform: translate3d(-100%, 0, 0);
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 .slide__number {
@@ -703,6 +723,7 @@ main {
   position: relative;
   margin-bottom: 1.25rem;
   opacity: 0;
+  pointer-events: auto;
 }
 
 .slide--current .slide__img-wrap,
@@ -1233,28 +1254,55 @@ video {
   }
 }
 
+@media screen and (min-width: 2500px) {
+  html {
+    font-size: 18px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
   .slide__img-wrap {
     width: 30%;
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1199px) {
+  html {
+    font-size: 12px;
+  }
+  .links-menu {
+    font-size: 0.7rem;
+  }
+  .icons {
+    top: 1rem;
+  }
+  .topbar {
+    top: 0;
+  }
+  .overlay .logo {
+    top: 1rem;
+  }
   .bio .img-profile {
     width: 40%;
-    min-height: 20rem;
+    min-height: 40vh;
     top: 40%;
     right: 0;
   }
   .bio .tech-icons {
     width: 40%;
+    min-height: 40vh;
     left: 0rem;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.9px) {
+  html {
+    font-size: 10px;
+  }
   .icons {
-    top: 1rem;
     right: 15%;
   }
   .topbar {
@@ -1270,8 +1318,11 @@ video {
     top: 2rem;
     right: 1rem;
   }
+  .links-menu {
+    display: none;
+    font-size: 0.7rem;
+  }
   .overlay .logo {
-    top: 1rem;
     left: 2rem;
   }
   .overlay .logo::after {
@@ -1297,6 +1348,7 @@ video {
     background-position: center;
   }
   .bio .greetings {
+    font-size: 1rem;
     margin: 1rem auto;
     position: relative;
     top: 0;
@@ -1316,7 +1368,7 @@ video {
     display: -ms-flexbox;
     display: flex;
     top: -1rem;
-    left: 4rem;
+    left: 8rem;
   }
   .bio .tech-icons div {
     margin-right: 2rem;
@@ -1406,6 +1458,9 @@ video {
 }
 
 @media screen and (max-width: 576px) {
+  html {
+    font-size: 12px;
+  }
   body {
     overflow: scroll;
   }
@@ -1431,7 +1486,7 @@ video {
     min-height: 15rem;
   }
   .bio .greetings {
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin: 1rem auto;
   }
   .bio .greetings h2 {
@@ -1440,7 +1495,6 @@ video {
   .bio .tech-icons {
     display: none;
     top: -1rem;
-    left: 0;
     margin: 0 auto;
   }
   .myBtn {
@@ -1472,7 +1526,7 @@ video {
     min-height: 12rem;
   }
   .bio .greetings {
-    font-size: 0.6rem;
+    font-size: 1rem;
     margin: 0.7rem auto;
   }
 }

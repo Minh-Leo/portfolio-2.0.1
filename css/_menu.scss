@@ -131,16 +131,16 @@
 }
 
 .links-menu {
-  font-size: 2rem;
+  // font-size: 2rem;
   color: white;
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 2rem;
-  left: 3rem;
-  z-index: 99;
+  bottom: 8rem;
+  left: 4rem;
+  // z-index: 99;
 
   pointer-events: auto;
   // border: 0;
@@ -154,19 +154,37 @@
 
   &_icon {
     position: relative;
-    width: 5rem;
-    height: 4rem;
+    bottom: 0;
+    width: 3rem;
+    height: 3rem;
     transition: all 0.2s;
+    cursor: pointer;
+
+    & i {
+      font-size: 1.5rem;
+      position: absolute;
+      bottom: 0;
+    }
+    & span {
+      font-size: 1rem;
+      width: max-content;
+      position: absolute;
+      bottom: 0.3rem;
+      left: 3rem;
+    }
 
     &:hover {
-      animation: pulse 1s infinite;
+      // animation: pulse 1s infinite;
 
-      & i {
+      & i,
+      span {
         color: var(--color-link-hover);
       }
     }
   }
   .close {
+    transition: transform 0.2s;
+
     & i {
       transform: rotate(180deg);
     }
@@ -175,15 +193,15 @@
   // toggle menu
   &_list {
     // display: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
     visibility: hidden;
     width: max-content;
     // height: 30rem;
     position: absolute;
-    top: 7rem;
+    bottom: 1rem;
     left: 1rem;
     z-index: 98;
-    padding-top: 20px;
+    padding-bottom: 20px;
     overflow: auto;
     opacity: 0;
     transition: all 0.5s;
