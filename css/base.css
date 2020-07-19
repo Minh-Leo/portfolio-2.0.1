@@ -940,7 +940,7 @@ video {
 }
 
 .overlay .logo {
-  font-family: Impact, 'Arial Narrow Bold', sans-serif;
+  font-family: 'Impact', 'Arial Narrow Bold', sans-serif;
   font-size: 2rem;
   font-weight: 400;
   text-transform: uppercase;
