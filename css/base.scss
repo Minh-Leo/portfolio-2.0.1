@@ -6,6 +6,18 @@
 @import 'pageLoader';
 @import 'mediaQuery';
 
+@font-face {
+  font-family: 'Impact';
+  src: url('./font-mfizz-2.4.1/impact.ttf') format('embedded-opentype'),
+    /* Internet Explorer */ url('./font-mfizz-2.4.1/impact.ttf') format('woff2'),
+    /* Super Modern Browsers */ url('./font-mfizz-2.4.1/impact.ttf')
+      format('woff'),
+    /* Pretty Modern Browsers */ url('./font-mfizz-2.4.1/impact.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */ url('./font-mfizz-2.4.1/impact.ttf')
+      format('svg'); /* Legacy iOS */
+}
+
 html {
   font-family: sans-serif;
   font-size: 16px;
