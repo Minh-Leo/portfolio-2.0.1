@@ -1,7 +1,7 @@
 # Portfolio
 
-A simple portfo
+A simple portfo inspired by slide show gallery from Codrops
 
 ## Misc
 
-Follow: [Twitter](http://www.twitter.com)
+Site in production: [Portfolio](https://minh.website)
